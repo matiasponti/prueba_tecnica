@@ -1,4 +1,4 @@
-# prueba_tecnica
+# marvel_app
 
 A new Flutter application.
 

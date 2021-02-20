@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:marvel_app/provider/helper.dart';
+import 'package:marvel_app/provider/series_provider.dart';
+import 'package:marvel_app/widgets/menu_drawer.dart';
+import 'package:marvel_app/widgets/series_grid.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -7,6 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  SeriesProvider seriesProvider = new SeriesProvider();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,6 +25,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).primaryColor,
         title: Text('Marvel App'),
       ),
+      drawer: MenuDrawer(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+        child: SeriesGrid(),
+      ),
     );
   }
+
 }
