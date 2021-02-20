@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_app/widgets/creators_list.dart';
+import 'package:marvel_app/src/widgets/creators_list.dart';
 
 class DetailPage extends StatefulWidget {
   DetailPage({this.id});

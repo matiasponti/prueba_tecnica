@@ -1,15 +1,15 @@
-import 'package:marvel_app/models/creators_model.dart';
-import 'package:marvel_app/models/series_model.dart';
-import 'package:marvel_app/provider/helper.dart';
+
 import 'package:http/http.dart' as http;
+import 'package:marvel_app/src/models/creators_model.dart';
 import 'dart:convert';
+import 'package:marvel_app/src/models/series_model.dart';
+import 'package:marvel_app/src/provider/helper.dart';
 
 class SeriesProvider {
 
-  int limit =20;
 
-  Future<List<Serie>> getSeries(offset) async {
-    final url = generateUrl("series", aditional: "&offset=$offset&limit=${limit.toString()}");
+  Future<List<Serie>> getSeries(offset, limit) async {
+    final url = generateUrl("series", aditional: "&offset=$offset&limit=$limit}");
     print(url);
     final resp = await http.get(url.toString());
     print(resp);

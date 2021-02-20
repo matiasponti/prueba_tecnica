@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_app/utils/app_localization.dart';
+import 'package:marvel_app/src/utils/app_localization.dart';
 
 class SupportPage extends StatefulWidget {
   @override

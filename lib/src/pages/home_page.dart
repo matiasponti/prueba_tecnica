@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_app/provider/helper.dart';
-import 'package:marvel_app/provider/series_provider.dart';
-import 'package:marvel_app/widgets/menu_drawer.dart';
-import 'package:marvel_app/widgets/series_grid.dart';
+import 'package:marvel_app/src/provider/series_provider.dart';
+import 'package:marvel_app/src/widgets/menu_drawer.dart';
+import 'package:marvel_app/src/widgets/series_grid.dart';
+
 
 class HomePage extends StatefulWidget {
   @override

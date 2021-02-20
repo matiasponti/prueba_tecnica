@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_app/pages/detail_page.dart';
-import 'package:marvel_app/provider/series_provider.dart';
+import 'package:marvel_app/src/provider/series_provider.dart';
 
 class CreatorsListView extends StatefulWidget {
   CreatorsListView({this.id});

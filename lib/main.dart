@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marvel_app/pages/detail_page.dart';
-import 'package:marvel_app/pages/home_page.dart';
-import 'package:marvel_app/pages/settings_page.dart';
-import 'package:marvel_app/pages/support_page.dart';
-import 'package:marvel_app/utils/app_localization.dart';
+import 'package:marvel_app/src/pages/home_page.dart';
+import 'package:marvel_app/src/pages/settings_page.dart';
+import 'package:marvel_app/src/pages/support_page.dart';
+import 'package:marvel_app/src/utils/app_localization.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -42,7 +42,6 @@ class MyApp extends StatelessWidget {
           '/': (BuildContext context) => HomePage(),
           'settings': (BuildContext context) => SettingsPage(),
           'support': (BuildContext context) => SupportPage(),
-          'creators': (BuildContext context) => DetailPage(),
         });
   }
 }
