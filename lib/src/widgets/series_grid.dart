@@ -98,7 +98,7 @@ class _SeriesGridState extends State<SeriesGrid> {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => DetailPage(id: id)),
+        MaterialPageRoute(builder: (context) => DetailPage(id: id, name: titulo,)),
       ),
       child: Stack(children: [
         ClipRRect(
@@ -161,7 +161,7 @@ class _SeriesGridState extends State<SeriesGrid> {
 
     new Timer(duration, () {
       setState(() {
-        _ultimaSerie = _ultimaSerie + 6;
+        _ultimaSerie = _ultimaSerie + 20;
         series = seriesProvider.getSeries(offset, _ultimaSerie);
         isLoading = false;
       });

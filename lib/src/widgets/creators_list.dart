@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marvel_app/src/provider/series_provider.dart';
+import 'package:marvel_app/src/utils/app_localization.dart';
 
 class CreatorsListView extends StatefulWidget {
   CreatorsListView({this.id});
@@ -19,6 +20,10 @@ class _CreatorsListViewState extends State<CreatorsListView> {
           if (snapshot.hasData) {
             return snapshot.data.length == 0 || snapshot.data ==[] ? _noCreators() : CustomScrollView(
               slivers: [
+                SliverToBoxAdapter(child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0,horizontal: 10.0),
+                  child: Text(AppLocalizations.of(context).translate('creators')+":"),
+                ),),
                 SliverList(
                     delegate: SliverChildBuilderDelegate((context, i) {
                       return _creatorTile(snapshot.data[i].fullName.toString(),snapshot.data[i].thumbnail.path.toString(),snapshot.data[i].thumbnail.extension.toString());
